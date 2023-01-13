@@ -19,6 +19,20 @@ DML - SELECT, INSERT
 INSERT INIO table_name VALUES(data1, data2, data3, data4,....,datan);
 */
 
+/*
+ALTER
+1) ADD COLUMN to excisting table;
+	ALTER TABLE table_name ADD COLUMN column_name datatype;
+    To add default value 
+    	ALTER TABLE table_name ADD COLUMN column_name datatype default column_value;
+
+2) DROP the column from existing table.
+3) Rename the column name
+4) Change the datatype
+
+UPDATE
+*/
+
 INSERT INTO river VALUES(1,'Kaveri','Talakadu',600);
 INSERT INTO river VALUES(2,'Tungabhadra','Shimogga',450);
 INSERT INTO river VALUES(3, 'Krishna', 'Almatti', 700);
@@ -69,6 +83,42 @@ INSERT INTO olympic_games VALUES(39,'Cycling','Landon Donovan', 'poland', 1, 56,
 INSERT INTO olympic_games VALUES(40,'Marathon','Drew Brees', 'Argentina', 1, 160, 100,'Gold',444,10584100000);
 
 
+commit;
 
+/* Syntax of renaming the column name
+	ALTER TABLE table_name RENAME COLUMN Existing_name TO new_Column_name;
+*/
+alter table river add column janasankya int;
 
+alter table river rename column janasankya to Population;
 
+alter table river modify column Population varchar(30);
+
+insert into water (Population, size) values (50, 55);
+
+insert into river (Population) values ('60');
+
+insert into river (Population) values ('abc');
+
+alter table river modify column Population int;
+
+alter  table  river add column grains varchar(33);
+
+alter table river modify column grains int;
+
+/*
+	Remaming the table name
+    RENAME TABLE old_table_name TO new_table_name
+*/
+
+RENAME TABLE river TO WATER;
+
+-- DROP the TABLE_NAME;
+
+DROP table a;
+
+-- TRUNCATE  TABLE table_name;
+
+select * from festivals;
+
+truncate table festivals;
