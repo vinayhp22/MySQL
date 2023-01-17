@@ -40,6 +40,7 @@ INSERT INTO river VALUES(3, 'Krishna', 'Almatti', 700);
 CREATE TABLE olympic_games(id int, game_type varchar(30), player_name varchar(30), country varchar(30), no_of_players int, no_of_teams int, no_of_medals int, medal_type varchar(30),jersey_no int,winning_price_amount bigint);
 
 SELECT * FROM olympic_games;
+drop table olympic_games;
 
 INSERT INTO olympic_games VALUES(1,'Cricket','Virat Kohli', 'India', 11, 10, 100, 'Gold',18,1000000);
 INSERT INTO olympic_games VALUES(2,'Football','Sunil Chhetri', 'Srilanka', 11, 12, 25,'Silver',11,500000);
@@ -82,6 +83,7 @@ INSERT INTO olympic_games VALUES(38,'Wresting','Steven Gerrard', 'Crotia', 1, 53
 INSERT INTO olympic_games VALUES(39,'Cycling','Landon Donovan', 'poland', 1, 56, 100,'Gold',666,1844000000);
 INSERT INTO olympic_games VALUES(40,'Marathon','Drew Brees', 'Argentina', 1, 160, 100,'Gold',444,10584100000);
 
+truncate olympic_games;
 
 commit;
 
@@ -122,3 +124,150 @@ DROP table a;
 select * from festivals;
 
 truncate table festivals;
+
+/*
+-- Decimal point 
+	amount_withdrawn decimal(7,2)
+-- timestamp - date & time:
+					now() - current date & time;
+-- boolean -> true - returns 1;
+			-> false - returns 0;
+
+*/
+
+
+create table bank_transaction(id int, b_name varchar(50), amount_withdrawn decimal(8,2), transaction_time timestamp, is_active_account boolean);
+
+select * from bank_transaction;
+
+insert into bank_transaction values(1, 'sbi', 85296.63, now(), true);
+insert into bank_transaction values(2, 'hdfc', 96385.96, now(), false), (3, 'bob', 96663.96, now(), true);
+
+/*
+
+where : is used to filter the data, 
+SELECT * table_name where condition;
+
+To fetch specific coloum - give column_name instead of *;
+*/
+
+SELECT * FROM bank_transaction WHERE id = 3;
+
+SELECT * from olympic_games;
+
+/*
+DDL- CREATE, ALTER, DROP, TRUNCATE, RENAME - modify the structure/ table 
+
+DML - SELECT, INSERT, UPDATE, DELETE - modify the data in the table, sililar to CRUD operations,
+
+To shuffle:- Not reccomemended in the company - as it is connected to DTO...
+*/
+
+ALTER TABLE olympic_games MODIFY no_of_players int after country;
+
+/*
+AND gates:
+
+Cond.1	Cond.2	Res
+TRUE	False	False
+False	True	False
+False	False 	False
+True	True 	True
+
+ORgates:
+
+Cond.1	Cond.2	Res
+TRUE	False	True
+False	True	True
+False	False 	False
+True	True 	True
+*/
+
+SELECT * FROM olympic_games WHERE country = 'India' AND medal_type = 'Gold';
+
+SELECT * FROM olympic_games WHERE country = 'India' OR medal_type = 'Plastic';
+/*
+1	Virat Kohli	India	11	Cricket	10	100	Gold	18	1000000
+2	Sunil Chhetri	India	11	Football	10	25	Gold	11	5000000
+*/
+commit;
+/*
+UPDATE
+
+UPDATE table_name SET column_name = 'data' where condition; 
+*/
+
+SET autocommit = 0;
+
+UPDATE olympic_games SET player_name = 'VinayHP' where country = 'India';
+
+rollback;
+
+truncate olympic_games;
+
+-- DELETE
+-- DELETE FROM table_name WHERE condition
+
+DELETE FROM olympic_games;
+
+DELETE FROM olympic_games where id=5;
+DELETE FROM olympic_games where id=6;
+
+commit;
+
+DELETE FROM olympic_games where id=7;
+DELETE FROM olympic_games where id=8;
+
+rollback;
+
+SELECT * FROM olympic_games;
+
+
+
+commit;
+
+truncate olympic_games;
+
+rollback;
+/*
+TCL - Transaction Control language
+1. Commit - Delete, Update & Insert (Except Select)
+			Drop vs Truncate vs Delete - Interview Question...
+2. rollback
+            For drop & truncate, rollback not works but for delete it works.
+3. savepoint
+			savepoint a;
+            rollback to a;
+*/
+
+CREATE TABLE a(id int);
+Insert into a values(1);
+Insert into a values(2);
+
+savepoint A;
+
+Insert into a values(3);
+
+rollback to A;
+
+drop table a;
+
+select * from a;															
+
+-- IN operator - to avoid multiple use OR condition  ex: where id=4 or id=5 or id=6 or id=7 
+
+SELECT * FROM olympic_games where id IN(4, 5, 6, 7);
+
+SELECT * FROM olympic_games where player_name IN('Virat Kohli', 'Sunil Chhetri', 'Hardik Pandya');
+
+-- NOT IN operator - to exclude the specific rows of specific data
+
+SELECT * FROM olympic_games where id NOT IN(3,4,5);
+
+-- BETWEEN operator - to fetch data of specific range
+
+SELECT * FROM olympic_games where id between 4 AND 9;
+
+-- NOT BETWEEN - to fetch data that excluded the specific range 
+
+SELECT * FROM olympic_games where id not between 4 AND 9;

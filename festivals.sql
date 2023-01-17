@@ -63,7 +63,7 @@ insert  into festivals values(48, 'Whatsapp Festival', '2023-01-1', 'Wed', 'All'
 insert  into festivals values(49, 'Facebook Festival', '2000-01-1', 'Wedn', 'Indians', 'Pizza', 'Blr Burger', 'FC KFC', 'social festival', 365, 'social media', '2014', '2022-8-8', 'Fri', 0, 'NA', 'Stories', 'Posts', 'whole decade', 'Connnecting world');
 insert  into festivals values(50, 'Elephant Festival', '2023-02-1', 'Monday', 'S-Kerala', 'Idli', 'Palya', 'Special Kaima', 'regional festival', 5, 'City heritage', '0000', '2022-02-1', 'Sunday', 0, 'NA', 'home coming', 'Thanking the god', 'Summer', 'NA');
 
-
+commit;
 
 
 truncate festivals;

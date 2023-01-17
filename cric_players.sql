@@ -54,4 +54,9 @@ INSERT into cric_players values(48, 'Niroshan Dickwella', 112, 507, 'Bermuda', '
 INSERT into cric_players values(49, 'Kyle Verreynne', 149, 506, 'Canada', 'Rangpur', 'ICC World Test Championship Final 2021', 'Kuthiravattam Pappu', 'Pooja Bhatt',  'Saumya Daan', 'Amravati', 'Maruthi mandir', 110048, 'NE India', 'JK vs Delhi');
 INSERT into cric_players values(50, 'Nkrumah Bonner', 150, 500, 'Japan', ' Rangers', 'South Africa tour of West Indies, 2021', 'Lokesh', 'Bhagyashree', 'Suresh Gopi', 'Noida', 'Anjaneya nagar', 110049, 'Srilanka', 'BTM Vs Rajajinagar');
 
+commit;
+
 truncate cric_players;
+
+
+

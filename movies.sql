@@ -35,7 +35,7 @@ insert into movies values(28,'Mr. And Mrs. Ramchari',430,'Thumkur','Kannada','Ya
 insert into movies values(29,'Simple Agi Ondh Love Story',440,'maddur','Kannada','Rakshi Shetty','Shweetha','praksh', '2022-06-01','Kannada',2200);
 insert into movies values(30,'Bahaddur',450,'nagara','Kannada','Druva','radikap','prathap', '2022-06-02','Kannada',2300);
 insert into movies values(31,'Dava Dava',460,'Madhugiri','Kannada','Vinay','Reena','Sumanth', '2021-08-15','Kannada',2400);
-insert into movies values(32,'Hatavaadi',470,'Giri','Kannada','Ravichandran','Spoorthi','Ashoka', '2022-06-05','Kannada',2500);
+insert into movies values(3 2,'Hatavaadi',470,'Giri','Kannada','Ravichandran','Spoorthi','Ashoka', '2022-06-05','Kannada',2500);
 insert into movies values(33,'Inspector Vikram',480,'hariyana','Kannada','Vikram','Roopashree','Manohar', '2022-06-07','Kannada',2600);
 insert into movies values(34,'Jogayya',490,'myso','Kannada','ShivaRajKumar','Anjali','jogi', '2022-06-09','Kannada',2700);
 insert into movies values(35,'Ondu Muttina Kathe',5000,'Ramanagara','Kannada','DrRajKumar','Ramya','kiran', '2022-07-05','Kannada',2800);
@@ -44,3 +44,7 @@ insert into movies values(37,'Ricky',520,'vijaynagara','Kannada','Rakshith Shett
 insert into movies values(38,'Naa Ninna Mareyalare',530,'banashnkari','Kannada','RajKumar','Leela','maruthi', '2022-07-04','Kannada',3100);
 insert into movies values(39,'Oda Huttidavaru',540,'Hebala','Kannada','ShivaRajkumar,Ravichandran','Divya','vinayak', '2022-10-10','Kannada',3200);
 insert into movies values(40,'Operation Diamond Racket',550,'yashwanthpura','Kannada','drRajkuara','Arathi','Uday', '2022-12-22','Kannada',3300);
+
+SELECT * from movies WHERE M_relasing_date = '2022-09-11';
+
+commit;

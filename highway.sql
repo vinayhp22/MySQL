@@ -47,3 +47,8 @@ INSERT into highway values(18, 'NH-87', 'NH-49', 'NH-49A', 'TN', 174, 'TamilNadu
 INSERT into highway values(19, 'NH-46A', 'NH-NE2', 'NH-143A', 'GJ', 180, 'Gujarath', 'Ahmedabad-Vadodara Expressway', 1999, 'Gayatri Projects', 'Ahmedabad project', 6000000, 26, 'Truck vs Truck', 22, 61, 41, 'Anjaneya', 9529637418, 'Rama Lakshman', 8741852963, 50, 'Ahmedabad', 201, 16, 'Red', 60, 5,  'Dhanushkodi state highway', 21, 'Dhanushkodi district road',  'Toilet juctions', 'Nadiad');
 
 INSERT into highway values(20, 'NH-294', 'NH-547E', 'NH-294A', 'MH', 35, 'Maharastra', 'Saoner', 2000, ' JMC Projects India', 'Gondakheri project', 5000000, 25, 'Truck vs Bus', 21, 60, 40, 'Rama', 8529637418, 'Lakshman', 741852963, 2, 'Gondakheri', 200, 9, 'Pink', 20, 5,  'Pune state highway', 3, 'Jodhpur district road',  'Road safety', 'Fariabad' );
+
+
+commit;
+
+SELECT * from highway where states = 'DNH';
