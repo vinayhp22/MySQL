@@ -245,29 +245,63 @@ Insert into a values(1);
 Insert into a values(2);
 
 savepoint A;
-
 Insert into a values(3);
-
 rollback to A;
 
 drop table a;
-
 select * from a;															
 
 -- IN operator - to avoid multiple use OR condition  ex: where id=4 or id=5 or id=6 or id=7 
-
 SELECT * FROM olympic_games where id IN(4, 5, 6, 7);
 
 SELECT * FROM olympic_games where player_name IN('Virat Kohli', 'Sunil Chhetri', 'Hardik Pandya');
 
 -- NOT IN operator - to exclude the specific rows of specific data
-
 SELECT * FROM olympic_games where id NOT IN(3,4,5);
 
 -- BETWEEN operator - to fetch data of specific range
-
 SELECT * FROM olympic_games where id between 4 AND 9;
 
 -- NOT BETWEEN - to fetch data that excluded the specific range 
-
 SELECT * FROM olympic_games where id not between 4 AND 9;
+
+-- LIKE
+-- SELECT * from table_name where column_name LIKE '%x' or '%x% or x%;
+
+SELECT * from movies where name LIKE '%y';
+SELECT * from movies where name LIKE '%A%';
+SELECT * from movies where name LIKE 'a%';
+
+
+-- UPPER:
+SELECT UPPER('aaaa');
+SELECT UPPER(name) from movies;
+
+-- lower
+SELECT LOWER('GOHOHHG');
+SELECT LOWER(location) from movies;
+
+-- CONCAT
+SELECT CONCAT('XWORKZ',' ODC');
+SELECT CONCAT(name,' - ' ,location) from movies; -- CONCAT(name,' - ' ,location)
+SELECT CONCAT(name,' - ' ,location) as movie_info from movies;  -- movie_info, as means alias...
+
+
+-- Instr - IN String
+-- INSTR(STRING VALUE, POSITION OF A CHARACTER)
+SELECT INSTR('XWORKZODC','r') as position;
+SELECT INSTR(name, 'a'), name as position from movies;
+SELECT INSTR(location, 'a'), name, location as position from movies;
+
+-- SUBSTR - Sub String - will return the substring of the string.
+		-- SUBSTR('Bangalore',Start_position, No_of_characters);
+SELECT SUBSTR('Bangalore', 3,5);
+SELECT SUBSTR('Xworkzoc',7,15);
+SELECT SUBSTR(name, 4,7), name from movies;
+
+-- DISTINCT - will return only unique values and not duplicates...
+SELECT DISTINCT(Hero_lang) FROM movies;
+SELECT DISTINCT(Hero_name) FROM movies;
+
+
+
