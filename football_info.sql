@@ -1,0 +1,56 @@
+CREATE TABLE football_info(id int not null unique, team_name varchar(50), team_captain varchar(50), captain_role enum('forward', 'middle', 'back', 'goalkeeper'), goalkeeper_name varchar(50), formation enum('5-3-2', '4-3-3', '3-4-3', '3-3-4', '2-4-4', '4-2-4', '4-4-2'), totalplayers int,  best_tournament varchar(50), best_player varchar(50), best_goalkeeper varchar(50), coach varchar(50), coach_role enum('forward', 'middle', 'back', 'goalkeeper', 'not a football player'), previous_couch varchar(50), previous_captain varchar(50), 1st_tournment varchar(50), present_tournament varchar(50), previous_tournament varchar(50), best_match varchar(50), no_of_red_cards int, yellow_cards int);
+
+INSERT INTO football_info values(1, 'Arizona Cardinals','Cristiano Ronaldo', 1, 'Amrinder Singh', 1, 85, 'UEFA', 'Lionel Messi', 'Darshan', 'Jaideep',  2, 'Neeraj', 'Chandra', 'Bengaluru Tournment', 'NE Tournment', 'Westrn Tournment', 'vs Vinay Club', 05, 06);
+INSERT INTO football_info values(2, 'Arsenal','Sergio Ramos', 4, 'Arindam Bhattacharya', 7, 805, 'CONMEBOL', 'Hugo Lloris', 'Balayya', 'Shisham',  5, 'Akshay', 'Chandan', 'Chennai Tournment', 'Xworkz Tournment', 'Bashyam Tournment', 'vs Ganaga club', 400, 800);
+INSERT INTO football_info values(3, 'Chelsea','Manuel Neuer', 3, 'Vishal Kaith', 6, 96, 'CAF', 'Sergio Ramos', 'Pavan Kalyan', 'Sunil',  4, 'Lokesh', 'Charan', 'Mumbai Tournment', 'Insights Tournment', 'Vision Tournment', 'vs Shubra Club', 952, 1852);
+INSERT INTO football_info values(4, 'Leicester City','Hugo Lloris', 2, 'Albino Gomes', 5, 20, 'AFC', 'Manuel Neuer', 'Kiccha', 'Akshara',  3, 'Vinay', 'Chethu', 'Delhi Tournment', 'Jaina Tournment', 'Thirthankara Tournment', 'vs Vicjy club', 257, 963);
+INSERT INTO football_info values(5, 'Liverpool','Lionel Messi', 1, 'Phurba Lachenpa', 4, 30, 'CONCACAF', 'Cristiano Ronaldo', 'Sudeepa', 'Shubya',  2, 'Shubam', 'Chiranjivi', 'Tumkur Tournment', 'TCS Tournment', 'TCS jun Tournment', 'vs jana club', 05, 06);
+INSERT INTO football_info values(6, 'Manchestar City','Landon Donovan', 4, 'Naveen Kumar', 3, 40, 'OFC', 'Dheeraj Singh', 'Doddanna', 'Manu',  1, 'Sanjay', 'Nuddu', 'Mysore Tournment', 'Infosys Tournment', 'Info Tournment', 'vs Dinay club', 663, 741);
+INSERT INTO football_info values(7, 'Manchester United','Matthew Upson', 3, 'Karanjit Singh', 2, 50, 'ISL', 'Landon Donovan', 'Chikkana', 'OM',  5, 'Prajwal', 'Mudduraj', 'Jodhpur Tournment', 'Dell Tournment', 'Dwel Tournment', 'vs Intel club', 654, 1456);
+INSERT INTO football_info values(8, 'Sunderland','Ledley King', 2, 'Gurpreet Singh Sandhu', 1, 60, 'FIFA', 'Laxmikant Kattimani', 'Brahmannada', 'Darshan',  4, 'Bharath', 'Danesh', 'Goa Tournment', 'Core Tournment', 'Radeon Tournment', 'vs i5 club', 741, 1256);
+INSERT INTO football_info values(9, 'West Ham United','Arda Turan', 1, 'Laxmikant Kattimani', 7, 70, 'Amsterdam Senior Football Tournament', 'Matthew Upson', 'Venkatesh', 'Shivanna',  3, 'Basavesh', 'Kitty', 'Kerala Tournment', 'Kirana Tournment', 'Mid Steps Tournment', 'vs Fine club', 666, 999);
+INSERT INTO football_info values(10, 'Barcelona','Luis Suarez', 4, 'Dheeraj Singh', 6, 80, 'Arnhem Cup 2023', 'Ledley King', 'RajKumar', 'Lokesh',  2, 'Sunil', 'Daya', 'Andra Tournment', 'Jaan Tournment', 'Feeb Tournment', 'vs Maarch club', 852, 1222);
+INSERT INTO football_info values(11, 'A S Roma','Djibril Ciss', 3, 'Subhasish Roy Chowdhury', 5, 90, 'Audruicq Tournament 2023', 'Rehenesh T. P', 'Punneth', 'Josh',  1, 'Shashank', 'Deepak', 'Telangana Tournment', 'Sun Tournment', 'Mon Tournment', 'vs Tues club', 652, 1255);
+INSERT INTO football_info values(12, 'Juventus','Phil Neville', 2, 'Apoula Edel', 4, 16, 'Barcelona Football Festiva', 'Vinay', 'Puneeth', 'Kumar',  5, 'Varnesh', 'Chethan', 'WB Tournment', 'one Tournment', 'Two Tournment', 'vs Three club', 333, 777);
+INSERT INTO football_info values(13, 'Inter Milan','Fabio Cannavaro', 1, 'Lalthuammawia Ralte', 3, 15, 'Barcelona Girls Cup', 'Kumar', 'Shivaraj', 'Preethi',  4, 'Prema', 'Devraj', 'Hyderbad Tournment', 'Ganaga  Tournment', 'janma Tournment', 'vs Farukh club', 111, 355);
+INSERT INTO football_info values(14, 'Southampton','Massimo Ambrosini', 4, 'Toni Doblas', 2, 25, 'Bayern Trophy ', 'Nithin', 'Kalyan', 'Kushi',  3, 'Happy', 'Devu', 'Mangester Tournment', 'Swathi Tournment', 'Sukana Tournment', 'vs Sujana club', 888, 1555);
+INSERT INTO football_info values(15, 'Crystal Palace','Cesc Fabregas', 3, 'Rehenesh T. P.', 1, 35, 'Belgium Cup', 'Lokesh', 'MegaStar', 'London',  2, 'Brithish', 'Dhanush', 'Liverpool sub Tournment', 'iarana Tournment', 'Open Tournment', 'vs modern club', 852, 963);
+INSERT INTO football_info values(16, 'Everton','Mark van Bomme', 2, 'Subrata Pal', 7, 75, 'Brabant Open', 'Sunil', 'MegaPower', 'Banglore',  1, 'Bengaluru', 'Divij', 'Mumbai city Tournment', 'Date Tournment', 'Data Tournment', 'vs day club', 855, 1255);
+INSERT INTO football_info values(17, 'AFC Bournemouth','Carlos Tevez', 1, 'Kamaljit Singh', 6, 45, 'Bruges Open', 'Mohan', 'Challenging', 'Delhi',  5, 'New Delhi', 'Diwakar', 'RajajiNagr Tournment', 'Jannu Tournment', 'Kashmir Tournment', 'vs Ladakh club', 621, 1566);
+INSERT INTO football_info values(18, 'Aston Villa','Nemanja Vidic', 4, 'Debjit Majumder', 5, 55, 'Copa castell', 'Abhi', 'Rocky', 'Delete',  4, 'Backup', 'Nagwsg', 'VijayaNagar Tournment', 'Mumbai Tournment', 'Pune Tournment', 'vs pune club', 222, 652);
+INSERT INTO football_info values(19, 'Bayern Munich','Alessandro Del Piero', 3, 'Pawan Kumar', 4, 95, 'Copa Calalunya', 'keshav', 'Yash', 'Raja',  3, 'Rani', 'Nagesh', 'Hebbala Flyover', 'Uttar Tournment', 'UK Tournment', 'vs UP club', 125, 963);
+commit;
+INSERT INTO football_info values(20, 'ATK Mohun Bagan','Carles Puyol', 2, 'Ravi Kumar', 3, 18, 'Copa Jordi', 'Akshay', 'Arya', 'Kalli',  2, 'Kalla', 'Raj Kumar', 'Silk Board', 'FIFA', 'quarters FIFA', 'vs Vinat club', 85, 655);
+INSERT INTO football_info values(21, 'Bengaluru','John Terry', 1, 'Manuel Neuer', 2, 98, 'Copa Maresme', 'Rakshit', 'Don', 'Jana',  1, 'Jani', 'Drushya', 'Whitefield Tournment', 'Loacal Tournment', 'Makali Tournment', 'vs Malleshwaram club', 231, 952);
+INSERT INTO football_info values(22, 'Chennaiyin','Javier Zanetti', 4, 'Thibaut Courtois', 1, 88, 'Copa Penya Barcelonista', 'Manu', 'Raja', 'Aarathi',  5, 'Absul', 'Eranna', 'Jalahalli Tournment', 'Ganagan Tournment', 'Hema Tournment', 'vs Deepila club', 520, 1256);
+INSERT INTO football_info values(23, 'East Bengal','Steven Gerrard', 3, 'Edouard Mendy', 7, 68, 'Copa Santa', 'Raki', 'Bima', 'Fazlam',  4, 'Fazal', 'Gagan', 'Nelamangalur Tournment', 'Lalabagh Tournment', 'Hoysala Tournment', 'vs Hosur club', 663, 1211);
+INSERT INTO football_info values(24, 'Goa','Francesco Totti', 2, 'Alisson Becker', 6, 48, 'Dutch Soccer', 'Sana', 'Vasu', 'Adarsh',  3, 'Adi', 'Ganappa', 'Chikkabalapur Tournment', 'Highway Tournment', 'Road Tournment', 'vs state roads club', 96, 150);
+INSERT INTO football_info values(25, 'Hyderabad','Michael Jakobsen', 1, 'Ederson', 7, 38, 'Hageland Cup', 'Vini', 'Veda', 'Ajay',  2, 'Ajith', 'Ganesh', 'New Bengaluru Tournment', 'Case Tournment', 'binary Tournment', 'vs Unary club', 854, 1225);
+savepoint A;
+INSERT INTO football_info values(26, 'Jamshedpur','Arindam Bhattacharya', 4, 'Gianluigi Donnarumma', 5, 46, 'Holland Cup', 'S Vinay', 'Venki', 'Akash',  1, 'Amar', 'Gangadhar', 'Mangalore Tournment', 'Phonepe Tournment', 'Digital Tournment', 'vs wealth club', 96, 166);
+INSERT INTO football_info values(27, 'Kerala Blasters','Gurjinder Kumar', 3, 'Marc-Andre ter Stegen', 4, 96, 'Maastricht trophy', 'Paramesh', 'Babu', 'Amit',  5, 'Anand', 'Girish', 'Koppala Tournment', 'Bit Tournment', 'Cox Tournment', 'vs google team club', 654, 1257);
+rollback to A;
+INSERT INTO football_info values(28, 'Mumbai City','Gaurav Bora.', 2, 'David de Gea', 3, 86, 'Sirene cup', 'Chethan', 'Rajesh', 'Nagaraj',  4, 'Bakul', 'Gnanesh', 'Pune Tournment', 'Sarvodaya Tournment', 'Sapthagiri Tournment', 'vs Xworkz club', 602, 1025);
+INSERT INTO football_info values(29, 'NorthEast United','Sunil Chhetri', 1, 'Jan Oblak', 2, 76, 'The sirene senior cup', 'Prashant', 'Mahanthesh', 'Varshil',  2, 'Shivakumar', 'Guru', 'Patna Tournment', 'MDRS Tournment', 'SPC Tournment', 'vs SCE club', 56, 160);
+INSERT INTO football_info values(30, 'Odisha','Jerry Mawihmingthanga', 4, 'Yassine Bounou', 1, 101, 'Trofeo mediterraneo', 'Vinod', 'Olave', 'RAVI',  1, 'Chandan', 'Goethu', 'Davangere Tournment', 'United Tournment', 'Monsoon Tournment', 'vs Winter club', 96, 169);
+rollback;
+
+SELECT * FROM football_info;
+
+SELECT * FROM football_info WHERE id = 3;
+SELECT * FROM football_info WHERE team_captain = 'Sunil Chhetri' AND formation = '4-3-3';
+SELECT * FROM football_info WHERE team_captain = 'Sunil Chhetri' OR formation = '4-3-3';
+SELECT * FROM football_info where id IN(4, 5, 6, 7);
+SELECT * FROM football_info where id NOT IN(4, 5, 6, 7);
+SELECT * FROM football_info where id between 4 AND 9;
+SELECT * from football_info where team_captain LIKE '%ronaldo%';
+SELECT DISTINCT(team_captain) FROM football_info;
+SELECT INSTR(team_captain, 'a'), team_captain as position from football_info;
+SELECT SUBSTR(team_captain, 5, 10), team_captain as position FROM football_info;
+SELECT UPPER(team_captain) as TEAM_CAPTAIN, captain_role from football_info;
+SELECT CONCAT(team_captain, ' - ', captain_role ) as football_info FROM football_info;
+SELECT COUNT(*) FROM football_info;
+SELECT SUM(totalplayers) from football_info;
+SELECT MAX(totalplayers) from football_info;
+SELECT MIN(totalplayers) from football_info;
+
